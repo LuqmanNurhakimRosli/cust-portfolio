@@ -11,7 +11,7 @@ export default function Hero() {
       <section className="container mx-auto px-4 pb-12 lg:flex md:px-40 max-w-full h-full">
         <div className="flex-1 space-y-4 sm:text-center lg:text-left flex flex-col justify-center">
           <h1 className="text-4xl font-bold text-yellow-500">
-            Welcome to My Portfolio
+            Welcome to My Portfolio tambah 
           </h1>
           <p className={`max-w-xl leading-relaxed ${darkMode ? "text-gray-300" : "text-gray-400"} sm:mx-auto lg:ml-0`}>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
