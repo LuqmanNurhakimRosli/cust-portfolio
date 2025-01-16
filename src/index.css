@@ -11,3 +11,7 @@
     --bg-color: black;
     --text-color: white;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }

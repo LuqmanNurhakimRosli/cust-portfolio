@@ -6,14 +6,13 @@ export default function Navbar() {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 py-2">
+    <div className={`bg-gray-100 dark:bg-gray-900 px-4 py-2`}>
       <nav
-        className={`w-[90%] md:w-1/2 mx-auto p-2 md:p-4 shadow-lg rounded-full ${
-          darkMode ? "bg-gray-800" : "bg-white"
-        } flex items-center justify-between`}
+        className={`w-[90%] md:w-1/2 mx-auto p-4 md:p-4 shadow-lg rounded-full 
+          ${darkMode ? "bg-gray-700 text-white" : "bg-white text-black"} flex items-center justify-between px-6`}
       >
         {/* Logo */}
-        <div className="text-base md:text-lg font-bold text-gray-800 dark:text-gray-200">
+        <div className={`text-base md:text-lg font-bold ${darkMode ? "text-white" : "text-black"}`}>
           Portfolio
         </div>
 
@@ -40,47 +39,52 @@ export default function Navbar() {
 
         {/* Navigation Links */}
         <div
-          className={`absolute md:relative top-16 md:top-0 left-0 md:left-auto w-full md:w-auto bg-white md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent
-            flex-col md:flex-row flex items-center md:space-x-2 md:flex ${
-              isMenuOpen ? "block" : "hidden"
-            } md:block`}
+        className={`absolute md:relative top-16 md:top-0 left-0 md:left-auto w-full md:w-auto 
+          ${darkMode ? "bg-gray-700 text-white" : "bg-white text-black"} 
+          flex-col md:flex-row flex items-center md:space-x-2 md:flex ${
+            isMenuOpen ? "block" : "hidden"
+          } md:block`}
+
         >
           <a
-            href="#hero"
-            className="text-sm md:text-base hover:text-gray-900 dark:hover:text-white text-gray-600 dark:text-gray-300 px-2 md:px-3 py-1 md:py-2"
-          >
-            Home
-          </a>
-          <a
-            href="#services"
-            className="text-sm md:text-base hover:text-gray-900 dark:hover:text-white text-gray-600 dark:text-gray-300 px-2 md:px-3 py-1 md:py-2"
-          >
-            Services
-          </a>
-          <a
-            href="#testimonial"
-            className="text-sm md:text-base hover:text-gray-900 dark:hover:text-white text-gray-600 dark:text-gray-300 px-2 md:px-3 py-1 md:py-2"
-          >
-            Testimonial
-          </a>
-          <a
-            href="#team"
-            className="text-sm md:text-base hover:text-gray-900 dark:hover:text-white text-gray-600 dark:text-gray-300 px-2 md:px-3 py-1 md:py-2"
-          >
-            Team
-          </a>
-          <a
-            href="#contact"
-            className="text-sm md:text-base hover:text-gray-900 dark:hover:text-white text-gray-600 dark:text-gray-300 px-2 md:px-3 py-1 md:py-2"
-          >
-            Contact Us
-          </a>
+          href="#hero"
+          className={`text-sm md:text-base hover:text-gray-900 dark:hover:text-white px-2 md:px-3 py-1 md:py-2 ${
+            darkMode ? "text-white" : "text-black"
+          }`}
+        >
+          Home
+        </a>
+        <a
+          href="#services"
+          className={`text-sm md:text-base hover:text-gray-900 dark:hover:text-white px-2 md:px-3 py-1 md:py-2 ${
+            darkMode ? "text-white" : "text-black"
+          }`}
+        >
+          Experience
+        </a>
+        <a
+          href="#team"
+          className={`text-sm md:text-base hover:text-gray-900 dark:hover:text-white px-2 md:px-3 py-1 md:py-2 ${
+            darkMode ? "text-white" : "text-black"
+          }`}
+        >
+          Projects
+        </a>
+        <a
+          href="#contact"
+          className={`text-sm md:text-base hover:text-gray-900 dark:hover:text-white px-2 md:px-3 py-1 md:py-2 ${
+            darkMode ? "text-white" : "text-black"
+          }`}
+        >
+          Contact Me
+        </a>
+
         </div>
 
         {/* Dark Mode Toggle */}
         <div
           onClick={toggleDarkMode}
-          className={`cursor-pointer flex items-center justify-center w-10 md:w-12 h-5 md:h-6 rounded-full ${
+          className={`cursor-pointer flex items-center w-14 md:w-12 h-5 md:h-6 rounded-full ${
             darkMode ? "bg-yellow-400" : "bg-gray-300"
           }`}
         >
